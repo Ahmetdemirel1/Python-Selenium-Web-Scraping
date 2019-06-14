@@ -45,17 +45,17 @@ class bcolors:
 class SearchFlightGetDetail():
     waiter(1)
     from_city = driver.find_element_by_css_selector("#select2-dll-flight-from-container").click()
-    driver.find_element_by_xpath(".//input[@placeholder='Şehir veya Havalimanı']").send_keys(departure_city)
+    write_from_city_name = driver.find_element_by_xpath(".//input[@placeholder='Şehir veya Havalimanı']").send_keys(departure_city)
     waiter(1)
-    driver.find_element_by_xpath("//*[@id='select2-dll-flight-from-results']/li[1]").click()
+    select_from_city = driver.find_element_by_xpath("//*[@id='select2-dll-flight-from-results']/li[1]").click()
     waiter(5)
 
 
 
     to_city = driver.find_element_by_css_selector("#select2-dll-flight-to-container").click()
-    driver.find_element_by_xpath(".//input[@placeholder='Şehir veya Havalimanı']").send_keys(arrival_city)
+    write_to_city_name = driver.find_element_by_xpath(".//input[@placeholder='Şehir veya Havalimanı']").send_keys(arrival_city)
     waiter(1)
-    driver.find_element_by_xpath("//*[@id='select2-dll-flight-to-results']/li[1]").click()
+    select_to_city = driver.find_element_by_xpath("//*[@id='select2-dll-flight-to-results']/li[1]").click()
 
     driver.find_element_by_xpath(".//h1[@class='header']").click()
 
